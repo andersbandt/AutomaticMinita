@@ -18,8 +18,8 @@
                  $hour = $_GET['hour'];
                  $minute = $_GET['minute']; 
                  $output = shell_exec('crontab -l');
-                 $command = $minute + $hour + '* * * STUFF TO DO!!!!
-                 file_put_contents('/tmp/crontab.txt', $output.' * * * * NEW_CRON'.PHP_EOL);
+                 $command = $minute + $hour + '* * * /* coffee.sh file path';
+                 file_put_contents('/tmp/crontab.txt', $output.$command.PHP_EOL);
                  echo exec('crontab /tmp/crontab.txt');
          }
          if(isset($_GET['on'])){
